@@ -8,37 +8,18 @@ package com.mycompany.hoteleria;
  *
  * @author jossanchez
  */
-public class Huesped {
-    private String cedula;
-    private String nombre;
+public class Huesped extends Persona {
     private int edad;
     private String pais;
     private String nacionalidad;
     private String telefono;
 
     public Huesped(String cedula, String nombre, int edad, String pais, String nacionalidad, String telefono) {
-        this.cedula = cedula;
-        this.nombre = nombre;
+        super(cedula, nombre);
         this.edad = edad;
         this.pais = pais;
         this.nacionalidad = nacionalidad;
         this.telefono = telefono;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getEdad() {

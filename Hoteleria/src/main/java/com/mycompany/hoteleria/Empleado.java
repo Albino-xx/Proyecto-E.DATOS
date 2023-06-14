@@ -8,35 +8,16 @@ package com.mycompany.hoteleria;
  *
  * @author jossanchez
  */
-public class Empleado {
-    private String cedula;
-    private String nombre;
+public class Empleado extends Persona {
     private String tipoEmpleado;
     private String observaciones;
     private String estado;
 
     public Empleado(String cedula, String nombre, String tipoEmpleado, String observaciones, String estado) {
-        this.cedula = cedula;
-        this.nombre = nombre;
+        super(cedula, nombre);
         this.tipoEmpleado = tipoEmpleado;
         this.observaciones = observaciones;
         this.estado = estado;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getTipoEmpleado() {

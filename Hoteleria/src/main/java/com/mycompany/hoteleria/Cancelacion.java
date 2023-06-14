@@ -8,32 +8,20 @@ package com.mycompany.hoteleria;
  *
  * @author jossanchez
  */
-public class Cancelacion {
+public class Cancelacion extends Reserva{
+     private int cedulaHuesped;
     private String idCancelacion;
-    private String cedulaHuesped;
     private String motivoCancelacion;
-    private String idReserva;
-    private String descripcionReserva;
-    private String tipoReserva;
-    private String fechaInicio;
-    private String fechaFinal;
-    private String fechaCreacion;
-    private int numeroPersonas;
 
-    public Cancelacion(String idCancelacion, String cedulaHuesped, String motivoCancelacion, String idReserva,
+    public Cancelacion(String idCancelacion, int cedulaHuesped, String motivoCancelacion, String idReserva,
                        String descripcionReserva, String tipoReserva, String fechaInicio, String fechaFinal,
                        String fechaCreacion, int numeroPersonas) {
+        super(idReserva, descripcionReserva, tipoReserva, fechaInicio, fechaFinal, fechaCreacion, numeroPersonas, "Cancelada");
         this.idCancelacion = idCancelacion;
         this.cedulaHuesped = cedulaHuesped;
         this.motivoCancelacion = motivoCancelacion;
-        this.idReserva = idReserva;
-        this.descripcionReserva = descripcionReserva;
-        this.tipoReserva = tipoReserva;
-        this.fechaInicio = fechaInicio;
-        this.fechaFinal = fechaFinal;
-        this.fechaCreacion = fechaCreacion;
-        this.numeroPersonas = numeroPersonas;
     }
+
 
     public String getIdCancelacion() {
         return idCancelacion;
@@ -43,11 +31,11 @@ public class Cancelacion {
         this.idCancelacion = idCancelacion;
     }
 
-    public String getCedulaHuesped() {
+    public int getCedulaHuesped() {
         return cedulaHuesped;
     }
 
-    public void setCedulaHuesped(String cedulaHuesped) {
+    public void setCedulaHuesped(int cedulaHuesped) {
         this.cedulaHuesped = cedulaHuesped;
     }
 
@@ -59,59 +47,4 @@ public class Cancelacion {
         this.motivoCancelacion = motivoCancelacion;
     }
 
-    public String getIdReserva() {
-        return idReserva;
-    }
-
-    public void setIdReserva(String idReserva) {
-        this.idReserva = idReserva;
-    }
-
-    public String getDescripcionReserva() {
-        return descripcionReserva;
-    }
-
-    public void setDescripcionReserva(String descripcionReserva) {
-        this.descripcionReserva = descripcionReserva;
-    }
-
-    public String getTipoReserva() {
-        return tipoReserva;
-    }
-
-    public void setTipoReserva(String tipoReserva) {
-        this.tipoReserva = tipoReserva;
-    }
-
-    public String getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(String fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public String getFechaFinal() {
-        return fechaFinal;
-    }
-
-    public void setFechaFinal(String fechaFinal) {
-        this.fechaFinal = fechaFinal;
-    }
-
-    public String getFechaCreacion() {
-        return fechaCreacion;
-    }
-
-    public void setFechaCreacion(String fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    public int getNumeroPersonas() {
-        return numeroPersonas;
-    }
-
-    public void setNumeroPersonas(int numeroPersonas) {
-        this.numeroPersonas = numeroPersonas;
-    }
 }
